@@ -21,7 +21,7 @@ struct ContentView: View {
                 HStack {
                     TextField("Enter new task", text: $newTask)
                         .textFieldStyle(RoundedBorderTextFieldStyle())
-                        .padding()
+                        .padding(5)
 
                     Button(action: {
                         if let task = editingTask {
@@ -31,7 +31,7 @@ struct ContentView: View {
                         }
                     }) {
                         Text(editingTask == nil ? "Add" : "Edit") // Change button text based on state
-                            .padding(.horizontal, 5)
+                            .padding(.horizontal, 8)
                             .padding(.vertical, 8)
                             .background(Color.blue)
                             .foregroundColor(.white)
@@ -141,3 +141,4 @@ struct ContentView_Previews: PreviewProvider {
         ContentView()
     }
 }
+
